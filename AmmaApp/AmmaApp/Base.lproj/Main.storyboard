@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AmmaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eq7-mm-zse">
+                                <rect key="frame" x="62" y="413" width="25" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JNH-jV-SnM">
+                                <rect key="frame" x="0.0" y="72" width="600" height="311"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationLevel="8" indentationWidth="10" reuseIdentifier="celllls" id="T55-Q3-HMK" customClass="TableViewCell" customModule="AmmaApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T55-Q3-HMK" id="IdB-TK-sdp">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i6S-YW-RRg">
+                                                    <rect key="frame" x="210" y="-8" width="41" height="52"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="41" id="66b-JP-R8v"/>
+                                                        <constraint firstAttribute="height" constant="51.5" id="viw-8Y-VYD"/>
+                                                    </constraints>
+                                                </pickerView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="i6S-YW-RRg" secondAttribute="bottom" constant="-8" id="SeJ-E4-V5M"/>
+                                                <constraint firstItem="i6S-YW-RRg" firstAttribute="leading" secondItem="IdB-TK-sdp" secondAttribute="leadingMargin" constant="202" id="hdn-Sv-Xst"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="pickerView" destination="i6S-YW-RRg" id="cgQ-aO-2Mv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="JNH-jV-SnM" secondAttribute="trailing" constant="-20" id="ARG-Bo-hJK"/>
+                            <constraint firstItem="JNH-jV-SnM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="CLa-z3-djL"/>
+                            <constraint firstItem="Eq7-mm-zse" firstAttribute="top" secondItem="JNH-jV-SnM" secondAttribute="bottom" constant="30" id="Jos-Yw-YyN"/>
+                            <constraint firstItem="JNH-jV-SnM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Of8-uH-rI9"/>
+                            <constraint firstItem="Eq7-mm-zse" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="42" id="SYX-hv-jJJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JNH-jV-SnM" secondAttribute="bottom" constant="217" id="mpw-Lj-YTB"/>
+                            <constraint firstItem="JNH-jV-SnM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="52" id="pm7-0q-mnB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameField" destination="Eq7-mm-zse" id="Rq6-or-i3n"/>
+                        <outlet property="tableView" destination="JNH-jV-SnM" id="4yK-w5-xtn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="332" y="234"/>
+        </scene>
+    </scenes>
+</document>
